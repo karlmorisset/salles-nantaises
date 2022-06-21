@@ -1,13 +1,6 @@
 /* eslint-disable camelcase */
-import { Link, useParams } from "react-router-dom";
-import data from "../data/data";
 
 function Salle() {
-  const { id } = useParams();
-  const salle = data.find((lieu) => lieu.recordid === id);
-  const { nom_cplet_lieu, adresse_lieu, telephone, infos_pratiques } =
-    salle.fields;
-
   return (
     <div>
       <div
@@ -20,13 +13,13 @@ function Salle() {
           marginBottom: 10,
         }}
       >
-        <Link to="/">Retour à liste</Link>
-        <h3>{nom_cplet_lieu}</h3>
+        {/* Faire un lien pour retourner à la liste des lieux */}
+        {/* <h3>Nom du lieu</h3> */}
 
         <div>
-          <h4>Adresse: {adresse_lieu}</h4>
-          <h4>Téléphone: {telephone}</h4>
-          <h4>Infos pratiques: {infos_pratiques}</h4>
+          <h4>Adresse: </h4>
+          <h4>Téléphone: </h4>
+          <h4>Infos pratiques: </h4>
         </div>
       </div>
     </div>
